@@ -1,3 +1,5 @@
+package sorting;
+
 public class InsertionSort {
 
     private static void swap(int[] a, int i, int j) {
