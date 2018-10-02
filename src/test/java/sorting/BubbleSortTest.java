@@ -1,32 +1,11 @@
 package sorting;
 
-import org.junit.After;
-import org.junit.Before;
+import helpers.BasicSortTest;
 import org.junit.Test;
 
-import static helpers.TestHelper.printArray;
 import static org.junit.Assert.assertArrayEquals;
 
-public class BubbleSortTest {
-
-    private static final String SEPERATOR = "===============================";
-
-    @Before
-    public void before() {
-        System.out.println(SEPERATOR);
-    }
-
-    @After
-    public void after() {
-        System.out.println(SEPERATOR);
-    }
-
-    private void displayArray(int[] a, boolean isSorted) {
-        System.out.print((isSorted) ? "S" : "Un");
-        System.out.println("orted array : ");
-        printArray(a);
-        System.out.println();
-    }
+public class BubbleSortTest extends BasicSortTest {
 
     @Test
     public void test_one() {
