@@ -5,7 +5,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertArrayEquals;
 
-public class InsertionSortTest extends BasicSortTest {
+public class MergeSortTest extends BasicSortTest {
 
     @Test
     public void test_one() {
@@ -13,7 +13,7 @@ public class InsertionSortTest extends BasicSortTest {
         int[] expected = new int[] {-1, 2};
         displayArray(actual, false);
 
-        InsertionSort.sort(actual);
+        BubbleSort.sort(actual);
         displayArray(actual, true);
         assertArrayEquals(expected, actual);
     }
@@ -24,7 +24,7 @@ public class InsertionSortTest extends BasicSortTest {
         int[] expected = new int[] {-11, -1, 2, 5, 9, 100};
         displayArray(actual, false);
 
-        InsertionSort.sort(actual);
+        BubbleSort.sort(actual);
         displayArray(actual, true);
         assertArrayEquals(expected, actual);
     }
