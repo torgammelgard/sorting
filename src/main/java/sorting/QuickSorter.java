@@ -1,5 +1,7 @@
 package sorting;
 
+import static sorting.Sorter.*;
+
 public class QuickSorter implements Sorter {
 
     private int partition(int[] a, int lo, int hi) {
@@ -7,10 +9,10 @@ public class QuickSorter implements Sorter {
         int i = lo;
         for (int j = lo; j < hi - 1; j++) {
             if (a[j] < pivot) {
-                Sorter.swap(a, i++, j);
+                swap(a, i++, j);
             }
         }
-        Sorter.swap(a, i, hi);
+        swap(a, i, hi);
         return i;
     }
 

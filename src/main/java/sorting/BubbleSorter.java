@@ -1,5 +1,7 @@
 package sorting;
 
+import static sorting.Sorter.*;
+
 public class BubbleSorter implements Sorter {
 
     public void sort(int[] a) {
@@ -8,7 +10,7 @@ public class BubbleSorter implements Sorter {
             swapped = false;
             for (int i = 1; i < a.length; i++) {
                 if (a[i-1] > a[i]) {
-                    Sorter.swap(a, i, i-1);
+                    swap(a, i, i-1);
                     swapped = true;
                     break;
                 }

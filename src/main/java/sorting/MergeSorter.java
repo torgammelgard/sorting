@@ -1,5 +1,7 @@
 package sorting;
 
+import static sorting.Sorter.*;
+
 public class MergeSorter implements Sorter {
 
     public void sort(int[] a) {
@@ -10,7 +12,7 @@ public class MergeSorter implements Sorter {
         if (right - left == 1) return;
         if (right - left == 2) {
             if (a[left] > a[right-1]) {
-                Sorter.swap(a, left, right  - 1);
+                swap(a, left, right  - 1);
             }
             return;
         }
