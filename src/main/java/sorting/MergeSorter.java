@@ -2,12 +2,6 @@ package sorting;
 
 public class MergeSorter implements Sorter {
 
-    private static void swap(int[] a, int i, int j) {
-        int buff = a[i];
-        a[i] = a[j];
-        a[j] = buff;
-    }
-
     public void sort(int[] a) {
         sort(a, 0, a.length);
     }
@@ -16,7 +10,7 @@ public class MergeSorter implements Sorter {
         if (right - left == 1) return;
         if (right - left == 2) {
             if (a[left] > a[right-1]) {
-                swap(a, left, right  - 1);
+                Sorter.swap(a, left, right  - 1);
             }
             return;
         }
