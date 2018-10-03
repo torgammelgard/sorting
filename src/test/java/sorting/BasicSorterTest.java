@@ -67,4 +67,16 @@ public class BasicSorterTest {
         displayArray(actual, true);
         assertArrayEquals(expected, actual);
     }
+
+    @Test
+    public void test_three() {
+        if (sorter == null) return;
+        int[] actual = new int[] {1, 2, 3};
+        int[] expected = new int[] {1, 2, 3};
+        displayArray(actual, false);
+
+        sorter.sort(actual);
+        displayArray(actual, true);
+        assertArrayEquals(expected, actual);
+    }
 }

@@ -5,15 +5,16 @@ import static sorting.Sorter.*;
 public class QuickSorter implements Sorter {
 
     private int partition(int[] a, int lo, int hi) {
-        int pivot = a[hi];
-        int i = lo;
-        for (int j = lo; j < hi - 1; j++) {
-            if (a[j] < pivot) {
-                swap(a, i++, j);
-            }
+        int pivot = hi;
+        int j = lo;
+        while (j < pivot) {
+            if (a[j] > a[pivot]) {
+                swap(a, j, pivot - 1);
+                swap(a, pivot - 1, pivot);
+                pivot--;
+            } else j++;
         }
-        swap(a, i, hi);
-        return i;
+        return pivot;
     }
 
     private void quickSort(int[] a, int lo, int hi) {
