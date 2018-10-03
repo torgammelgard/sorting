@@ -30,7 +30,7 @@ public class BasicSorterTest {
     }
 
     private void displayArray(int[] a, boolean isSorted) {
-        System.out.print((isSorted) ? "S" : "Un");
+        System.out.print((isSorted) ? "S" : "Uns");
         System.out.println("orted array : ");
         printArray(a);
         System.out.println();
