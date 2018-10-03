@@ -1,6 +1,6 @@
 package sorting;
 
-public class BubbleSort {
+public class BubbleSorter implements Sorter {
 
     private static void swap(int[] a, int i, int j) {
         int buff = a[i];
@@ -8,7 +8,7 @@ public class BubbleSort {
         a[j] = buff;
     }
 
-    static void sort(int[] a) {
+    public void sort(int[] a) {
         boolean swapped;
         do {
             swapped = false;
@@ -21,5 +21,10 @@ public class BubbleSort {
             }
         }
         while(swapped);
+    }
+
+    @Override
+    public String toString() {
+        return "Bubble sorter";
     }
 }
